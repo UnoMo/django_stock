@@ -9,7 +9,7 @@ def home(request):
     
     if request.method == 'POST':
         ticker = request.POST['ticker']
-        api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "/quote?token=pk_9492c6166a6342e4911c6ceb8e38d34f")
+        api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "<put your key in here>")
         try:
             api = json.loads(api_request.content)
         except Exception as e:
